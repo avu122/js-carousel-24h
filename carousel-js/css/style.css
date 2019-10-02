@@ -1,0 +1,175 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+h3, p {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 500px;
+    max-width: 800px;
+    margin: 0 auto;
+    /* padding: 10px; */
+    border: 5px solid #666666;
+    border-radius: 5px;
+}
+
+.carousel-container .carousel-slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+.carousel-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    font-size: 24px;
+}
+
+.carousel-container #bubbles {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.bubble {
+    margin: 3px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+}
+
+#prevBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 40px;
+    color: #ffffff;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 40px;
+    color: #ffffff;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.carousel-container .leftCurrentSlide {
+    animation-name: leftCurrent;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.carousel-container .nextSlide {
+    animation-name: next;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes leftCurrent {
+    from {
+        margin-left: 0;
+        opacity: 1;
+    }
+    to {
+        margin-left: -100%;
+        opacity: 1;
+    }
+}
+
+@keyframes next {
+    from {
+        margin-left: 100%;
+        opacity: 1;
+    }
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}
+
+.carousel-container .rightCurrentSlide {
+    animation-name: rightCurrent;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.carousel-container .prevSlide {
+    animation-name: prev;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rightCurrent {
+    from {
+        margin-left: 0;
+        opacity: 1;
+    }
+    to {
+        margin-left: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes prev {
+    from {
+        margin-left: -100%;
+        opacity: 1;
+    }
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}

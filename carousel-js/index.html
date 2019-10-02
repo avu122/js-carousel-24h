@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html> -->
+<html>
+
+<head>
+  <title>Carousel JS</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="fontawesome-free-5.10.2-web/css/fontawesome.css" />
+  <link rel="stylesheet" type="text/css" href="fontawesome-free-5.10.2-web/css/all.css" />
+</head>
+
+<body>
+
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <div onclick="newSlide(-1)"><i class="fas fa-chevron-left" id="prevBtn"></i></div>
+      <div onclick="newSlide(1)"><i class="fas fa-chevron-right" id="nextBtn"></i></div>
+      <div class="carousel-img">
+        <img src="img/chicago.jpg" alt="">
+        <div class="carousel-caption">
+          <h3>Chicago</h3>
+          <p>Thank you, Chicago!</p>
+        </div>
+      </div>
+      <div class="carousel-img">
+        <img src="img/la.jpg" alt="">
+        <div class="carousel-caption">
+          <h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p>
+        </div>
+      </div>
+      <div class="carousel-img">
+        <img src="img/ny.jpg" alt="">
+        <div class="carousel-caption">
+          <h3>New York</h3>
+          <p>We love the Big Apple!</p>
+        </div>
+      </div>
+    </div>
+    <div id="bubbles"></div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
